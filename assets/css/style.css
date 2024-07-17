@@ -1,0 +1,731 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --white: white;
+    --grey: grey;
+    --darker-grey: #CED4DA;
+    --dark-grey:#212529;
+    --light-grey: #F8F9FA;
+    --lightest-grey: #E9ECEF;
+    --golden: #ffc800;
+    --yellow: #FFC800;
+    --dark-yellow: #e0b20a;
+    --black-hover: rgb(82, 79, 79);
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* / GENERAL */
+
+
+/* ===================================== */
+
+
+/* TEXT BOX */
+
+.txt-box {
+    text-align: center;
+    padding: 100px 0 60px 0;
+}
+
+.txt-box h2 {
+   font-size: 40px;
+   font-weight: 800;
+   /* font-family: ; */
+}
+
+.txt-box h3 {
+    padding-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    /* font-family: ; */
+    color: var(--grey);
+    font-weight: 500;
+}
+
+/* / TEXT BOX */
+
+
+/* ===================================== */
+
+
+/* NAV */
+
+nav {
+    background-color: var(--dark-grey);
+    width: 100%;
+    padding: 20px 0;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";    font-weight: bolder;
+    position: fixed;
+    z-index: 1000;
+    letter-spacing: 1px;
+}
+
+nav>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 140px;
+    padding-top: 4px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav ul li:last-child {
+    display: none;
+    background-color: var(--dark-grey);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+li:hover a {
+    color: var(--golden);
+}
+
+.button {
+    height: 40px;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: 13px;
+}
+
+
+@media (max-width:992px) {
+
+    nav ul li {
+        display: none;
+    }
+
+    nav ul li:last-child {
+        display: block;
+    }
+}
+
+@media (max-width:576px) {
+
+    nav div.container {
+        width: 95%;
+    }
+    
+}
+
+
+/* NAV */
+
+
+/* ===================================== */
+
+
+/* HEADER */
+
+header {
+    background: url("https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 60px;
+    height: 750px;
+}
+
+header>div {
+    padding-top: 220px;
+    color: var(--white);
+}
+
+header>div div:first-child {
+    font-size: 40px;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+
+header>div div:nth-child(2) {
+    padding-top: 15px;
+    font-size: 77px;
+    font-weight: 500;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+
+header>div a {
+    display: block;
+    margin: 50px auto;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    background-color:var(--yellow);
+    width: 250px;
+    padding: 25px 0;
+    border-radius: 5px;
+}
+
+header>div a:hover {
+    background-color: var(--dark-yellow);
+}
+
+/* / HEADER */
+
+
+/* ===================================== */
+
+
+/* SERVICES */
+
+#services>div {
+    text-align: center;
+}
+
+.serv-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 100px;
+}
+
+.serv-info>div {
+    width: 33%;
+}
+
+.serv-info>div>div {
+    background-color: var(--yellow);
+    height: 125px;
+    width: 125px;
+    margin-left: 28%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.serv-info>div>div i {
+    font-size: 60px;
+    padding: 30px;
+    color: var(--white);
+    position: absolute;
+    left: -2%;
+    top: 25%;
+}
+
+.serv-info>div:last-child>div i {
+    left: 5%;
+}
+
+.serv-info>div>h4 {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.serv-info>div>p {
+    font-size: 18px;
+    padding-bottom: 15px;
+    color: var(--grey);
+}
+
+/* / SERVICES */
+
+
+/* ===================================== */
+
+
+/* PORTFOLIO */
+
+#portfolio {
+    background-color: var(--light-grey);
+}
+
+.port-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    padding-bottom: 100px;
+}
+
+.card {
+    width: 32%;
+}
+
+.port-cards img {
+    width: 100%;
+}
+
+.image {
+    position: relative;
+}
+
+.image i {
+    font-size: 60px;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.image:hover i {
+    display: block;
+}
+
+.image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    position: absolute;
+    display: none;
+    opacity: 0.9;
+}
+
+.image:hover::before {
+    display: block;
+    cursor: pointer;
+}
+
+.caption {
+    text-align: center;
+    background-color: var(--white);
+    width: 100%;
+    padding: 25px;
+    /* font-family: ; */
+}
+
+.caption h3 {
+    font-size: 29px;
+    padding-bottom: 5px;
+}
+
+.caption p {
+    font-size: 18px;
+    color: var(--grey);
+    font-style: italic;
+}
+
+@media (max-width:992px) {
+    .card {
+        width: 48%;
+    }
+
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width:768px) {
+    /* .card {
+        width: 48%;
+    } */
+
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width:576px) {
+    .card {
+        width: 100%;
+    }
+
+    #portfolio div.container {
+        width: 85%;
+    
+    }
+    
+}
+
+/* / PORTFOLIO */
+
+
+/* ===================================== */
+
+
+/* ABOUT */ 
+
+#about>div.container {
+    padding-bottom: 100px;
+}
+
+.timeline {
+    width: 90%;
+    height: 1400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 99%;
+    background-color: var(--lightest-grey);
+    left: 50%;
+    z-index: -1;
+}
+
+.timeline>div {
+    width: 70%;
+    padding-bottom: 110px;
+    display: flex;
+    gap: 25px;
+}
+
+.tl-image {
+    width: 170px;
+    height: 170px;
+    border: 7px solid var(--lightest-grey);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tl-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tl-image:last-child {
+    background-color: var(--yellow);
+}
+
+.tl-image:last-child h4 {
+    font-size: 20px;
+    color: var(--white);
+    text-align: center;
+    line-height: 27px;
+    padding-top: 35px;
+    font-weight: 900;
+}
+
+.timeline h4 {
+    font-size: 27px;
+    line-height: 36px;
+}
+
+.timeline p {
+    font-size: 19px;
+    color: var(--grey);
+    padding-top: 7px;
+}
+
+.tl-panel {
+    line-height: 29px;
+    width: 60%;
+    padding: 0 20px;
+}
+
+.left {
+    text-align: right;
+    margin-right: 10%;
+    padding-right: 27px ;
+}
+
+.right {
+    margin-left: 42.55%;
+}
+
+/* / ABOUT */
+
+
+/* ===================================== */
+
+
+/* TEAM */
+
+#team {
+    background-color: var(--light-grey);
+}
+
+#team>div.container {
+    padding-bottom: 100px;
+}
+
+.employers {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.employers h4 {
+    font-size: 27px;
+    padding-bottom: 5px;
+}
+
+.employers p {
+    font-size: 17px;
+    color: var(--grey);
+    padding-bottom: 20px;
+}
+
+.employers img {
+    width: 250px;
+    border: 9px solid var(--lightest-grey);
+    border-radius: 50%;
+}
+
+.emp-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.emp-socials a {
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.emp-socials a:hover {
+    background-color: var(--black-hover);
+}
+
+.emp-socials a i {
+    color: var(--white);
+    position: absolute;
+    top: 30%;
+    left: 34%;
+}
+
+#team>div>p {
+    padding-top: 50px;
+    font-size: 18px;
+    color: var(--grey);
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media (max-width:992px) {
+    .employers {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .employers>div {
+        width: 100%;
+    }
+}
+
+/* / TEAM */
+
+
+/* ===================================== */
+
+
+/* FAANG */
+
+
+#faang {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    margin: auto;
+}
+
+#faang img {
+    cursor: pointer;
+}
+
+#faang img:nth-child(1){
+    width: 200px;
+}
+
+#faang img:nth-child(2){
+    width: 120px;
+}
+
+#faang img:nth-child(3){
+    width: 150px;
+}
+
+#faang img:nth-child(4){
+    width: 130px;
+}
+
+@media (max-width:992px) {
+    #faang {
+        gap: 50px;
+        margin-right: 25%;
+    }
+}
+
+/* / FAANG */
+
+
+/* ===================================== */
+
+
+/* CONTACT */
+
+#contact {
+    width: 100%;
+    height: 650px;
+    background-image: url("https://startbootstrap.github.io/startbootstrap-agency/assets/img/map-image.png");
+    background-color: var(--dark-grey);
+    background-position: center center;
+}
+
+#contact h2{
+    color: var(--white);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form div {
+    flex-wrap: wrap;
+    width: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+form input {
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+}
+
+form textarea {
+    width: 50%;
+    height: 250px;
+    resize: vertical;
+    border-radius: 5px;
+}
+
+form ::placeholder {
+    color: var(--darker-grey);
+    padding: 25px 25px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#contact button {
+    background-color: var(--yellow);
+    color: var(--white);
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 13px;
+    width: 250px;
+    height: 70px;
+    margin-left: 40%;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+@media (max-width:768px) {
+    form {
+        display: block;
+    }
+
+    form div {
+        width: 100%;
+    }
+
+    form textarea {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    
+
+}
+
+/* / CONTACT */
+
+
+/* ===================================== */
+
+
+/* FOOTER */
+
+footer>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+footer>div>div:last-child {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 17px;
+    color: var(--grey);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socials div {
+    background-color: var(--dark-grey);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.socials i {
+    color: var(--white);
+    position: absolute;
+    top: 30%;
+    left: 34%;
+}
+
+@media (max-width:992px) {
+    footer>div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer>div>div {
+        width: 100%;
+    }
+}
+
+/* / FOOTER */
+
+
+/* ===================================== */
